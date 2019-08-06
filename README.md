@@ -152,10 +152,6 @@ Replacing `PRISMIC_REPO_NAME`, `PRISMIC_API_KEY`, `YOUR_SITE_NAME` and `HOME_PAT
 
 7. Create a `Frequently Asked Question` content page.
 
-## Laying Down the Law
-
-If you don't already have a Privacy Policy or Terms and Conditions document, you can generate one at [Iubenda](https://www.iubenda.com/).
-
 ## Overriding the Theme
 
 ### Colors and Styles
