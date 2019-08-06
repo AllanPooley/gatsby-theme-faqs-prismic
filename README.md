@@ -1,5 +1,7 @@
 # Gatsby Theme FAQ Prismic
 
+🚧🚧🚧🚧🚧🚧🚧 👷 Still being made! Not operational. ...yet! 🏗️ 🚧🚧🚧🚧🚧🚧🚧
+
 - [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding polished FAQ pages 💅out-of-the-box.
 
 ## Why?
