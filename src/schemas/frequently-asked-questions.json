@@ -1,0 +1,83 @@
+{
+  "Main": {
+    "page_name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Page Name",
+        "placeholder": "Enter page name"
+      }
+    },
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug",
+        "placeholder": "Enter slug"
+      }
+    },
+    "questions": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "question": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading2",
+              "label": "Question",
+              "placeholder": "How safe is the journey?"
+            }
+          },
+          "answer": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+              "allowTargetBlank": true,
+              "label": "Answer",
+              "placeholder": "The trip to Mars cannot be called risk free. Like any venture..."
+            }
+          },
+          "category": {
+            "type": "Link",
+            "config": {
+              "select": "document",
+              "customtypes": [
+                "question_category"
+              ],
+              "label": "Category"
+            }
+          }
+        },
+        "label": "Questions"
+      }
+    }
+  },
+  "SEO": {
+    "meta_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Meta Title",
+        "placeholder": "Enter meta title"
+      }
+    },
+    "meta_description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Meta Description",
+        "placeholder": "Enter meta description"
+      }
+    },
+    "open_graph_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 1200,
+          "height": 630
+        },
+        "thumbnails": [],
+        "label": "Open Graph Image"
+      }
+    }
+  }
+}
