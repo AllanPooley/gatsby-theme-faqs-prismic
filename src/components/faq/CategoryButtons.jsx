@@ -3,7 +3,6 @@ import {
   Wrapper,
 } from '../common';
 import { generateKey } from '../../util/helpers';
-import './CategoryButtons.scss';
 
 const CategoryButton = ({ isActive, categoryText, setActiveCategoryHandler }) => (
   <button

@@ -1,6 +1,10 @@
 .category-buttons {
   margin-bottom: 100px;
 
+  @include media-down(mobile) {
+    display: none;
+  }
+
   .buttons {
 
     .category-button {

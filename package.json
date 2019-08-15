@@ -1,12 +1,12 @@
 {
-  "name": "@littleplusbig/gatsby-theme-faq-prismic",
+  "name": "@littleplusbig/gatsby-theme-faqs-prismic",
   "author": "Allan Pooley",
   "repository": {
     "type": "git",
-    "url": "https://github.com/littleplusbig/gatsby-theme-faq-prismic"
+    "url": "https://github.com/littleplusbig/gatsby-theme-faqs-prismic"
   },
   "bugs": {
-    "url": "https://github.com/littleplusbig/gatsby-theme-faq-prismic/issues"
+    "url": "https://github.com/littleplusbig/gatsby-theme-faqs-prismic/issues"
   },
   "keywords": [
     "gatsby",
@@ -39,6 +39,7 @@
     "@mdx-js/react": "^1.0.27",
     "gatsby-plugin-theme-ui": "^0.2.25",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
+    "react-css-collapse": "^3.6.0",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.3.2",
     "theme-ui": "^0.2.25"

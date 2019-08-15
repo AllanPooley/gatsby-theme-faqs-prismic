@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Wrapper,
 } from '../common';
-import './SearchBar.scss';
 
 export const SearchBar = (props) => {
   const {

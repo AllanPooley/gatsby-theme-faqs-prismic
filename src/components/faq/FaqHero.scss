@@ -1,6 +1,7 @@
 .faq-hero {
   position: relative;
   overflow: hidden;
+  background-color: #D2D2D2;
 
   .wrapper {
     position: relative;
@@ -8,7 +9,6 @@
   }
 
   .container {
-    background-color: $tertiary;
     padding: 190px 0 150px;
 
     @include media-down(mobile) {
@@ -31,17 +31,6 @@
 
     @include media-down(mobile) {
       max-width: 500px;
-    }
-  }
-
-  .svg-background {
-    @include center-align(absolute);
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-
-    svg {
-      height: 100%;
-      width: 100%;
     }
   }
 }

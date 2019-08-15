@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import {
   Layout,
-} from '../components';
+} from '../components/common';
 import {
   FaqHero,
   CategoryButtons,
   QuestionsList,
   SearchBar,
 } from '../components/faq';
-import './faq.scss';
 
 class FrequentlyAskedQuestions extends Component {
   state = {
