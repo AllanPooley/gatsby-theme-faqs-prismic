@@ -3,14 +3,11 @@ import { jsx } from 'theme-ui'
 import { Component } from 'react';
 import { graphql } from 'gatsby';
 import { Styled } from 'theme-ui'
-import {
-  Layout,
-} from '../components/common';
+import { Layout } from '../components/common';
 import {
   FaqHero,
-  CategoryButtons,
+  ControlPanel,
   QuestionsList,
-  SearchBar,
 } from '../components/faq';
 
 class FrequentlyAskedQuestions extends Component {
@@ -35,14 +32,14 @@ class FrequentlyAskedQuestions extends Component {
     this.setState({ visibleQuestions: questions });
   }
 
-  setSearch = (event) => {
+  setSearchHandler = (event) => {
     const { statusFilter } = this.state;
     const searchQuery = event.target.value.toLowerCase() || '';
     this.setState({ searchQuery });
     this.queryQuestions(statusFilter, searchQuery);
   }
 
-  setCategory = (event, category) => {
+  setCategoryHandler = (event, category) => {
     const { activeCategory, searchQuery } = this.state;
     if (event) event.preventDefault();
     if (category !== activeCategory) {
@@ -117,28 +114,15 @@ class FrequentlyAskedQuestions extends Component {
           seoData={seoData}
         >
           <FaqHero />
-          <div
-            className="control-panel"
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              padding: '50px 0',
-            }}
-          >
-            <CategoryButtons
-              activeCategory={activeCategory}
-              categories={uniqueCategories}
-              setActiveCategoryHandler={this.setCategory}
-            />
-            <SearchBar
-              searchActive={searchActive}
-              searchQuery={searchQuery}
-              setSearch={this.setSearch}
-              searchFocusHandler={this.searchFocusHandler}
-            />
-          </div>
+          <ControlPanel
+            activeCategory={activeCategory}
+            uniqueCategories={uniqueCategories}
+            setActiveCategoryHandler={this.setCategoryHandler}
+            searchActive={searchActive}
+            searchQuery={searchQuery}
+            searchFocusHandler={this.searchFocusHandler}
+            setSearchHandler={this.setSearchHandler}
+          />
           <QuestionsList
             questions={visibleQuestions}
           />
