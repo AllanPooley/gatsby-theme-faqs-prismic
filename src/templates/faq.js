@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { Component } from 'react';
 import { graphql } from 'gatsby';
+import { Styled } from 'theme-ui'
 import {
   Layout,
 } from '../components/common';
@@ -108,23 +111,39 @@ class FrequentlyAskedQuestions extends Component {
     const categories = questions.map((faqItem => faqItem.category.document[0].data.categoryName.text));
     const uniqueCategories = [...new Set(categories)];
     return (
-      <Layout location={location} seoData={seoData}>
-        <FaqHero />
-        <SearchBar
-          searchActive={searchActive}
-          searchQuery={searchQuery}
-          setSearch={this.setSearch}
-          searchFocusHandler={this.searchFocusHandler}
-        />
-        <CategoryButtons
-          activeCategory={activeCategory}
-          categories={uniqueCategories}
-          setActiveCategoryHandler={this.setCategory}
-        />
-        <QuestionsList
-          questions={visibleQuestions}
-        />
-      </Layout>
+      <Styled.root>
+        <Layout
+          location={location}
+          seoData={seoData}
+        >
+          <FaqHero />
+          <div
+            className="control-panel"
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '50px 0',
+            }}
+          >
+            <CategoryButtons
+              activeCategory={activeCategory}
+              categories={uniqueCategories}
+              setActiveCategoryHandler={this.setCategory}
+            />
+            <SearchBar
+              searchActive={searchActive}
+              searchQuery={searchQuery}
+              setSearch={this.setSearch}
+              searchFocusHandler={this.searchFocusHandler}
+            />
+          </div>
+          <QuestionsList
+            questions={visibleQuestions}
+          />
+        </Layout>
+      </Styled.root>
     );
   }
 }

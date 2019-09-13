@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { useState } from 'react';
 import Collapse from 'react-css-collapse';
 import {
   Wrapper,
@@ -33,7 +35,12 @@ const QuestionListItem = (props) => {
         </button>
       </div>
       <div className="bottom-container">
-        <Collapse isOpen={questionExpanded}>
+        <Collapse
+          isOpen={questionExpanded}
+          sx={{
+            transition: 'height .33s cubic-bezier(.4, 0, .2, 1)'
+          }}
+        >
           <HtmlContent content={answer.html} />
         </Collapse>
       </div>
