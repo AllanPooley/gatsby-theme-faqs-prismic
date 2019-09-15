@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { Component } from 'react';
 import { graphql } from 'gatsby';
-import {
-  Layout,
-} from '../components';
+import { Styled } from 'theme-ui'
+import { Layout } from '../components/common';
 import {
   FaqHero,
-  CategoryButtons,
+  ControlPanel,
   QuestionsList,
-  SearchBar,
 } from '../components/faq';
-import './faq.scss';
 
 class FrequentlyAskedQuestions extends Component {
   state = {
@@ -33,14 +32,14 @@ class FrequentlyAskedQuestions extends Component {
     this.setState({ visibleQuestions: questions });
   }
 
-  setSearch = (event) => {
+  setSearchHandler = (event) => {
     const { statusFilter } = this.state;
     const searchQuery = event.target.value.toLowerCase() || '';
     this.setState({ searchQuery });
     this.queryQuestions(statusFilter, searchQuery);
   }
 
-  setCategory = (event, category) => {
+  setCategoryHandler = (event, category) => {
     const { activeCategory, searchQuery } = this.state;
     if (event) event.preventDefault();
     if (category !== activeCategory) {
@@ -109,23 +108,27 @@ class FrequentlyAskedQuestions extends Component {
     const categories = questions.map((faqItem => faqItem.category.document[0].data.categoryName.text));
     const uniqueCategories = [...new Set(categories)];
     return (
-      <Layout location={location} seoData={seoData}>
-        <FaqHero />
-        <SearchBar
-          searchActive={searchActive}
-          searchQuery={searchQuery}
-          setSearch={this.setSearch}
-          searchFocusHandler={this.searchFocusHandler}
-        />
-        <CategoryButtons
-          activeCategory={activeCategory}
-          categories={uniqueCategories}
-          setActiveCategoryHandler={this.setCategory}
-        />
-        <QuestionsList
-          questions={visibleQuestions}
-        />
-      </Layout>
+      <Styled.root>
+        <Layout
+          location={location}
+          seoData={seoData}
+        >
+          <FaqHero />
+          <ControlPanel
+            activeCategory={activeCategory}
+            uniqueCategories={uniqueCategories}
+            setActiveCategoryHandler={this.setCategoryHandler}
+            searchActive={searchActive}
+            searchQuery={searchQuery}
+            searchFocusHandler={this.searchFocusHandler}
+            setSearchHandler={this.setSearchHandler}
+          />
+          <QuestionsList
+            questions={visibleQuestions}
+            location={location}
+          />
+        </Layout>
+      </Styled.root>
     );
   }
 }

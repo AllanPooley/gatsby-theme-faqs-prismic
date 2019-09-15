@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
     `),
   );
 
-  const faqPageList = faqPages.data.allPrismicLegal.edges;
+  const faqPageList = faqPages.data.allPrismicFrequentlyAskedQuestions.edges;
 
   /* ---------------------------------------------
   = Create an individual page for each Information page =

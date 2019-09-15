@@ -25,15 +25,15 @@ export const theme = {
     caps: '0.2em',
   },
   colors: {
-    text: "#333333",
+    text: "#241E1E",
     background: "#FFFFFF",
-    primary: "#5B2589",
-    primaryLighter: "#6F2B9F",
-    primaryEvenLighter: "#BB75D1",
+    primary: "#965ADC",
+    primaryDark: "#2D235F",
+    primaryLight: "#E6D7FA",
     white: "#FFFFFF",
-    offWhite: "#FCFAFF",
-    black: "#000000",
-    offBlack: "#333333",
+    offWhite: "#FAF0DC",
+    black: "#241E1E",
+    offBlack: "#241E1E",
     grey: "#F3F3F3",
   },
   sizes: {
@@ -48,6 +48,9 @@ export const theme = {
     },
   },
   styles: {
+    Main: {
+      backgroundColor: "background"
+    },
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
