@@ -10,8 +10,21 @@ export const SearchBar = (props) => {
   } = props;
   const classes = `${searchActive ? ' active' : ''}${(searchQuery !== '') ? ' has-value' : ''}`;
   return (
-    <section className="faq-search-bar">
-      <div className="container">
+    <section
+      className="faq-search-bar"
+      sx={{
+        flex: 1,
+        position: 'relative',
+        marginLeft: 'auto',
+      }}
+    >
+      <div
+        className="container"
+        sx={{
+          maxWidth: '350px',
+          marginLeft: 'auto',
+        }}
+      >
         <label
           className={`search${classes}`}
           htmlFor="search"
@@ -33,11 +46,11 @@ export const SearchBar = (props) => {
             sx={{
               fontSize: '16px',
               width: '100%',
-              maxWidth: '850px',
               margin: '0',
               padding: '12px 20px 10px 50px',
               boxShadow: 'none',
               color: 'text',
+              borderRadius: '32px',
               borderWidth: '1.5px',
               borderStyle: 'solid',
               borderColor: 'primary',

@@ -82,6 +82,8 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     appearance: none;
     border-radius: 0;
+    padding: 0;
+    text-align: left;
     resize: none;
     &:focus {
       outline: none;

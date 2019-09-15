@@ -11,8 +11,12 @@ const Wrapper = (props) => {
         maxWidth: '1240px',
         marginLeft: 'auto',
         marginRight: 'auto',
-        paddingLeft: '20px',
-        paddingRight: '20px',
+        padding: [
+          '0px 20px',
+          '0px 20px',
+          '0px 20px',
+          '0px 40px',
+        ],
       }}
     >
       {children}

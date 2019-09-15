@@ -5,7 +5,7 @@ export const FaqHero = () => (
   <section
     className="faq-page-hero"
     sx={{
-      backgroundColor: 'secondaryLight',
+      backgroundColor: 'primaryDark',
       overflow: 'hidden',
       padding: ['40px 5% 0 0', '40px 5% 0 0', '40px 10% 0', '80px 10% 0'],
     }}
@@ -31,7 +31,7 @@ export const FaqHero = () => (
             '140px 100px 60px',
             '140px 100px 40px',
           ],
-          backgroundColor: 'offWhite',
+          backgroundColor: 'white',
           position: 'relative',
           'z-index': '3',
         }}
@@ -39,7 +39,7 @@ export const FaqHero = () => (
         <Styled.h1
           className="page-title"
           sx={{
-            color: 'secondaryDark',
+            color: 'black',
             maxWidth: '500px',
             padding: '40px 0'
           }}
@@ -50,7 +50,7 @@ export const FaqHero = () => (
       <div
         className="outer-shadow"
         sx={{
-          backgroundColor: 'secondary',
+          backgroundColor: 'primaryLight',
           position: 'absolute',
           height: '100%',
           width: '100%',
@@ -68,7 +68,7 @@ export const FaqHero = () => (
       <div
         className="outer-most-shadow"
         sx={{
-          backgroundColor: 'secondaryDark',
+          backgroundColor: 'primary',
           position: 'absolute',
           height: '100%',
           width: '100%',

@@ -18,8 +18,34 @@ const CategoryButtons = (props) => {
             className={`category-button selection-button ${(activeCategory === null) ? 'active' : ''}`}
             onClick={event => setActiveCategoryHandler(event, null)}
             aria-label="Show questions from all categories"
+            sx={{
+              display: 'inline-block',
+              borderRadius: '36px',
+              backgroundColor: 'primary',
+              padding: '10px 20px',
+              textDecoration: 'none',
+              transition: 'color 0.3s ease, background-color 0.3s ease',
+              marginRight: '15px',
+              '&:hover': {
+                backgroundColor: 'primaryDark',
+                cursor: 'pointer',
+              },
+              '&:focus, &:active': {
+                outline: 'none',
+              },
+            }}
           >
-            <span>All</span>
+            <span
+              sx={{
+                display: 'block',
+                width: '100%',
+                color: 'white',
+                fontSize: '14px',
+                textAlign: 'center',
+              }}
+            >
+              All
+            </span>
           </button>
           {categories && categories.map((category, index) => (
             <CategoryButton

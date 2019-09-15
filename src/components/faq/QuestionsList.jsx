@@ -7,7 +7,8 @@ const QuestionsList = ({ questions }) => (
   <section
     className="faq-question-list"
     sx={{
-      marginBottom: '120px'
+      padding: '60px 0 140px',
+      minHeight: '100vh'
     }}
   >
     <Wrapper>

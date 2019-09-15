@@ -20,25 +20,31 @@ const ControlPanel = (props) => {
     <div
       className="control-panel"
       sx={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
         padding: '50px 0',
       }}
     >
       <Wrapper>
-        <CategoryButtons
-          activeCategory={activeCategory}
-          categories={uniqueCategories}
-          setActiveCategoryHandler={setActiveCategoryHandler}
-        />
-        <SearchBar
-          searchActive={searchActive}
-          searchQuery={searchQuery}
-          setSearchHandler={setSearchHandler}
-          searchFocusHandler={searchFocusHandler}
-        />
+        <div
+          className="container"
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <CategoryButtons
+            activeCategory={activeCategory}
+            categories={uniqueCategories}
+            setActiveCategoryHandler={setActiveCategoryHandler}
+          />
+          <SearchBar
+            searchActive={searchActive}
+            searchQuery={searchQuery}
+            setSearchHandler={setSearchHandler}
+            searchFocusHandler={searchFocusHandler}
+          />
+        </div>
       </Wrapper>
     </div>
   );
