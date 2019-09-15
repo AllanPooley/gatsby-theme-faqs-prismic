@@ -15,7 +15,7 @@
     "prismic",
     "frequently-asked-questions"
   ],
-  "version": "1.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -39,6 +39,7 @@
     "@mdx-js/react": "^1.0.27",
     "gatsby-plugin-theme-ui": "^0.2.25",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
+    "query-string": "^6.8.3",
     "react-css-collapse": "^3.6.0",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.3.2",

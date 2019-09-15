@@ -125,6 +125,7 @@ class FrequentlyAskedQuestions extends Component {
           />
           <QuestionsList
             questions={visibleQuestions}
+            location={location}
           />
         </Layout>
       </Styled.root>
