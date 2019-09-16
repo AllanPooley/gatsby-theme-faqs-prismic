@@ -22,9 +22,9 @@ In your `gatsby-config.js`, under `plugins` add:
 {
   resolve: "gatsby-theme-faqs-prismic",
   options: {
-    repositoryName: PRISMIC_REPO_NAME,
-    accessToken: PRISMIC_API_KEY,
-    siteName: YOUR_SITE_NAME // (Optional)
+    prismicRepositoryName: PRISMIC_REPO_NAME,
+    prismicAccessToken: PRISMIC_API_KEY,
+    siteName: YOUR_SITE_NAME, // (Optional)
     homePath: HOME_PATH // (Optional) Defaults to '/'
   },
 },
@@ -178,9 +178,9 @@ export default {
     ...baseTheme.colors,
     text: '#333333',
     background: '#FFFFFF',
-    primary: '#5B2589',
-    primaryLighter: '#6F2B9F',
-    primaryEvenLighter: '#BB75D1',
+    primary: '#1e3799',
+    primaryLight: '#4a69bd',
+    primaryDark: '#0c2461',
     white: '#FFFFFF',
     offWhite: '#FCFAFF',
     black: '#000000',
@@ -202,9 +202,9 @@ export default {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-    primary: '#22a6b3',
-    primaryLighter: '#7ed6df',
-    primaryEvenLighter: '#c7ecee',
+    primary: '#7ed6df',
+    primaryLight: '#c7ecee',
+    primaryDark: '#22a6b3',
   },
 };
 
