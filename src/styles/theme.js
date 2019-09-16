@@ -31,7 +31,7 @@ export const theme = {
     primaryDark: '#2D235F',
     primaryLight: '#E6D7FA',
     white: '#FFFFFF',
-    offWhite: '#FAF0DC',
+    offWhite: '#FCFAFF',
     black: '#241E1E',
     offBlack: '#241E1E',
     grey: '#F3F3F3',

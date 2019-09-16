@@ -33,10 +33,10 @@ export const FaqHero = () => (
           padding: [
             '80px 40px',
             '100px 20px 140px',
-            '140px 100px 60px',
-            '140px 100px 40px',
+            '140px 100px 80px',
+            '140px 100px 80px',
           ],
-          backgroundColor: 'white',
+          backgroundColor: 'offWhite',
           position: 'relative',
           'z-index': '3',
         }}
