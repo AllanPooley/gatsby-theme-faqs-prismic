@@ -25,7 +25,11 @@ const QuestionsListItem = (props) => {
   const copyAnchorLink = (event, questionId) => {
     event.preventDefault();
     if (!showCopyNotification) {
-      const anchorUrl = `${location.href}?question=${questionId}`;
+      const {
+        origin,
+        pathname,
+      } = location
+      const anchorUrl = `${origin}${pathname}?question=${questionId}`;
       copyToClipboard(anchorUrl);
       setShowCopyNotification(true);
       setTimeout(() => {
@@ -117,7 +121,7 @@ const QuestionsListItem = (props) => {
                 whiteSpace: 'nowrap',
               }}
             >
-              Copied!
+              Copied
             </span>
             <div
               className="tooltip-triangle"
@@ -198,7 +202,7 @@ const QuestionsListItem = (props) => {
               <div
                 className="stroke-vertical"
                 sx={{
-                  content: '',
+                  content: '""',
                   display: 'block',
                   width: '20px',
                   height: '0px',
