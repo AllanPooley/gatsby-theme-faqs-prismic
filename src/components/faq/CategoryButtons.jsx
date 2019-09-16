@@ -1,7 +1,39 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { CategoryButton } from '.'
+import { jsx } from 'theme-ui';
+import { CategoryButton } from '.';
 import { generateKey } from '../../util/helpers';
+
+
+const ButtonStyles = (isActive) => ({
+  display: 'inline-block',
+  borderRadius: '36px',
+  backgroundColor: isActive ? 'primaryDark' : 'primary',
+  padding: '10px 20px',
+  textDecoration: 'none',
+  transition: 'color 0.3s ease, background-color 0.3s ease',
+  marginRight: '10px',
+  marginBottom: [
+    '10px',
+    '10px',
+    '10px',
+    '0px',
+  ],
+  '&:hover': {
+    backgroundColor: 'primaryDark',
+    cursor: isActive ? 'default' : 'pointer',
+  },
+  '&:focus, &:active': {
+    outline: 'none',
+  },
+});
+
+const ButtonTextStyles = {
+  display: 'block',
+  width: '100%',
+  color: 'white',
+  fontSize: '14px',
+  textAlign: 'center',
+};
 
 const CategoryButtons = (props) => {
   const {
@@ -10,39 +42,32 @@ const CategoryButtons = (props) => {
     setActiveCategoryHandler,
   } = props;
   return (
-    <section className="category-buttons">
+    <section
+      className="category-buttons"
+      sx={{
+        width: '100%',
+        maxWidth: '800px',
+        marginRight: 'auto',
+      }}
+    >
       <div className="container">
-        <div className="buttons">
+        <div
+          className="buttons"
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+          }}
+        >
           <button
             type="button"
-            className={`category-button selection-button ${(activeCategory === null) ? 'active' : ''}`}
-            onClick={event => setActiveCategoryHandler(event, null)}
+            className="category-button"
+            onClick={(event) => setActiveCategoryHandler(event, null)}
             aria-label="Show questions from all categories"
-            sx={{
-              display: 'inline-block',
-              borderRadius: '36px',
-              backgroundColor: 'primary',
-              padding: '10px 20px',
-              textDecoration: 'none',
-              transition: 'color 0.3s ease, background-color 0.3s ease',
-              marginRight: '15px',
-              '&:hover': {
-                backgroundColor: 'primaryDark',
-                cursor: 'pointer',
-              },
-              '&:focus, &:active': {
-                outline: 'none',
-              },
-            }}
+            sx={ButtonStyles(activeCategory === null)}
           >
             <span
-              sx={{
-                display: 'block',
-                width: '100%',
-                color: 'white',
-                fontSize: '14px',
-                textAlign: 'center',
-              }}
+              sx={ButtonTextStyles}
             >
               All
             </span>
@@ -50,6 +75,8 @@ const CategoryButtons = (props) => {
           {categories && categories.map((category, index) => (
             <CategoryButton
               key={generateKey(index)}
+              buttonStyles={ButtonStyles}
+              buttonTextStyles={ButtonTextStyles}
               isActive={activeCategory === category}
               categoryText={category}
               setActiveCategoryHandler={setActiveCategoryHandler}

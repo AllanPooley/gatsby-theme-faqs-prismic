@@ -5,6 +5,10 @@ import CategoryButton from './CategoryButton';
 import QuestionsList from './QuestionsList';
 import QuestionsListItem from './QuestionsListItem';
 import SearchBar from './SearchBar';
+import CopyLinkButton from './CopyLinkButton';
+import RevealButton from './RevealButton';
+import RevealIcon from './RevealIcon';
+import QuestionContent from './QuestionContent';
 
 export {
   FaqHero,
@@ -14,4 +18,8 @@ export {
   QuestionsList,
   QuestionsListItem,
   SearchBar,
+  CopyLinkButton,
+  RevealButton,
+  RevealIcon,
+  QuestionContent,
 };

@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { Component } from 'react'
-import queryString from 'query-string'
+import { jsx } from 'theme-ui';
+import { Component } from 'react';
+import queryString from 'query-string';
 import { QuestionsListItem } from '.';
 import { Wrapper } from '../common';
-import { scrollToPageElement } from '../../util/helpers'
+import { scrollToPageElement } from '../../util/helpers';
 
 class QuestionsList extends Component {
   componentDidMount() {
@@ -15,6 +15,7 @@ class QuestionsList extends Component {
     const anchoredQuestionId = queryParams.question;
     if (anchoredQuestionId) scrollToPageElement(null, anchoredQuestionId);
   }
+
   render() {
     const {
       questions,
@@ -24,8 +25,8 @@ class QuestionsList extends Component {
       <section
         className="faq-question-list"
         sx={{
-          padding: '60px 0 140px',
-          minHeight: '100vh'
+          padding: '20px 0 140px',
+          minHeight: '100vh',
         }}
       >
         <Wrapper>
@@ -48,7 +49,17 @@ class QuestionsList extends Component {
                 className="no-results-message"
                 sx={{
                   display: 'block',
-                  padding: '120px 20px',
+                  padding: [
+                    '60px 20px',
+                    '120px 20px',
+                    '120px 20px',
+                    '120px 20px',
+                  ],
+                  fontFamily: 'heading',
+                  lineHeight: 'heading',
+                  fontWeight: 'heading',
+                  color: 'text',
+                  fontSize: [3, 3, 4, 4],
                   textAlign: 'center',
                 }}
               >

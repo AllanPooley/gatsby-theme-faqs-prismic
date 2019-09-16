@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui';
 
 export const FaqHero = () => (
   <section
@@ -7,7 +7,12 @@ export const FaqHero = () => (
     sx={{
       backgroundColor: 'primaryDark',
       overflow: 'hidden',
-      padding: ['40px 5% 0 0', '40px 5% 0 0', '40px 10% 0', '80px 10% 0'],
+      padding: [
+        '25% 5% 0 0',
+        '80px 5% 0 0',
+        '80px 10% 0',
+        '80px 10% 0',
+      ],
     }}
   >
     <div
@@ -26,7 +31,7 @@ export const FaqHero = () => (
           maxWidth: '1240px',
           margin: '0 auto',
           padding: [
-            '100px 20px 120px',
+            '80px 40px',
             '100px 20px 140px',
             '140px 100px 60px',
             '140px 100px 40px',
@@ -41,7 +46,6 @@ export const FaqHero = () => (
           sx={{
             color: 'black',
             maxWidth: '500px',
-            padding: '40px 0'
           }}
         >
           Frequently Asked Questions
@@ -57,10 +61,10 @@ export const FaqHero = () => (
           top: 0,
           left: 0,
           transform: [
-            'translateX(-2vw) translateY(-5%)',
-            'translateX(-2vw) translateY(-5%)',
-            'translateX(-2vw) translateY(20%)',
-            'translateX(-2vw) translateY(20%)',
+            'translateX(-7.5vw) translateY(-10%)',
+            'translateX(-2.5vw) translateY(-5%)',
+            'translateX(-2.5vw) translateY(20%)',
+            'translateX(-2.5vw) translateY(20%)',
           ],
           'z-index': '2',
         }}
@@ -75,7 +79,7 @@ export const FaqHero = () => (
           top: 0,
           left: 0,
           transform: [
-            'translateX(-5vw) translateY(-10%)',
+            'translateX(-15vw) translateY(-20%)',
             'translateX(-5vw) translateY(-10%)',
             'translateX(-5vw) translateY(40%)',
             'translateX(-5vw) translateY(40%)',
