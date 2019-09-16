@@ -1,17 +1,17 @@
-# Gatsby Theme FAQ Prismic
-
-🚧🚧🚧🚧🚧🚧🚧 👷 Still being made! Not operational. ...yet! 🏗️ 🚧🚧🚧🚧🚧🚧🚧
+# Gatsby Theme FAQs Prismic
 
 - [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding polished FAQ pages 💅out-of-the-box.
 
 ## Why?
 
-TODO
+The Frequently Asked Questions (FAQ) is a common place page on most website. Though, it doesn't exactly summon the creative juices, it's a pretty basic page, [much like legal pages](https://github.com/littleplusbig/gatsby-theme-legals-prismic).
+
+The idea of `gatsby-theme-faqs-prismic` is do it once well - a super neat, clean and responsive implementation. It's reusable, theme-able and customisable 🎉
 
 ## Installation
 
 ```
-yarn add @littleplusbig/gatsby-theme-faq-prismic
+yarn add @littleplusbig/gatsby-theme-faqs-prismic
 ```
 
 ## Configuration
@@ -20,7 +20,7 @@ In your `gatsby-config.js`, under `plugins` add:
 
 ```
 {
-  resolve: "gatsby-theme-faq-prismic",
+  resolve: "gatsby-theme-faqs-prismic",
   options: {
     repositoryName: PRISMIC_REPO_NAME,
     accessToken: PRISMIC_API_KEY,
@@ -165,7 +165,7 @@ In order to override the styles, in the `src` directory of your project, add a f
 Inside of this file (`your-gatsby-project/src/gatsby-plugin-theme-ui/index.js`) add the following:
 
 ```
-import baseTheme from '@littleplusbig/gatsby-theme-faq-prismic/src/gatsby-plugin-theme-ui';
+import baseTheme from '@littleplusbig/gatsby-theme-faqs-prismic/src/gatsby-plugin-theme-ui';
 
 export default {
   ...baseTheme,
@@ -196,7 +196,7 @@ Above are the default values for the theme, which you can change depending on yo
 For example, here is how I might change the theme colours from shades of purple, to a snazzy blue:
 
 ```
-import baseTheme from '@littleplusbig/gatsby-theme-faq-prismic/src/gatsby-plugin-theme-ui';
+import baseTheme from '@littleplusbig/gatsby-theme-faqs-prismic/src/gatsby-plugin-theme-ui';
 
 export default {
   ...baseTheme,
@@ -210,7 +210,7 @@ export default {
 
 ```
 
-The complete set of customisable theme values can be explored in [gatsby-theme-faq-prismic/src/styles/theme.js](https://github.com/littleplusbig/gatsby-theme-faq-prismic/blob/master/src/styles/theme.js)
+The complete set of customisable theme values can be explored in [gatsby-theme-faqs-prismic/src/styles/theme.js](https://github.com/littleplusbig/gatsby-theme-faqs-prismic/blob/master/src/styles/theme.js)
 
 More information about `gatsby-plugin-theme-ui` [here](https://www.npmjs.com/package/gatsby-plugin-theme-ui).
 
@@ -218,13 +218,13 @@ More information about `gatsby-plugin-theme-ui` [here](https://www.npmjs.com/pac
 
 The components that make up the Frequently Asked Questions pages can be some what customised too. This can be done through concept new to Gatsby Themes called '[Component Shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/)'.
 
-If you wish to override a component, in the `src` directory of your project, create the following directory structure: `@littleplusbig/gatsby-theme-faq-prismic/components`.
+If you wish to override a component, in the `src` directory of your project, create the following directory structure: `@littleplusbig/gatsby-theme-faqs-prismic/components`.
 
-There are several components that a Frequently Asked Questions page, they can all be viewed here: [gatsby-theme-faq-prismic/src/components](https://github.com/littleplusbig/gatsby-theme-faq-prismic/tree/master/src/components)
+There are several components that a Frequently Asked Questions page, they can all be viewed here: [gatsby-theme-faqs-prismic/src/components](https://github.com/littleplusbig/gatsby-theme-faqs-prismic/tree/master/src/components)
 
 An example of how these components might be customised is adding your project's `<Header />` and `<Footer />` components to the layout.
 
-In order to do this I create a shadowing `layout.js` in the directory we've just created (`your-gatsby-project/src/@littleplusbig/gatsby-theme-faq-prismic/components/layout.js`):
+In order to do this I create a shadowing `layout.js` in the directory we've just created (`your-gatsby-project/src/@littleplusbig/gatsby-theme-faqs-prismic/components/layout.js`):
 
 ```
 import React from 'react';
