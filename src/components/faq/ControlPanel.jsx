@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from 'theme-ui';
 import {
   CategoryButtons,
   SearchBar,
-} from '.'
-import { Wrapper } from '../common'
+} from '.';
+import { Wrapper } from '../common';
 
 const ControlPanel = (props) => {
   const {
@@ -28,26 +28,26 @@ const ControlPanel = (props) => {
           className="container"
           sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}
         >
-          <CategoryButtons
-            activeCategory={activeCategory}
-            categories={uniqueCategories}
-            setActiveCategoryHandler={setActiveCategoryHandler}
-          />
           <SearchBar
             searchActive={searchActive}
             searchQuery={searchQuery}
             setSearchHandler={setSearchHandler}
             searchFocusHandler={searchFocusHandler}
           />
+          <CategoryButtons
+            activeCategory={activeCategory}
+            categories={uniqueCategories}
+            setActiveCategoryHandler={setActiveCategoryHandler}
+          />
         </div>
       </Wrapper>
     </div>
   );
-}
+};
 
 export default ControlPanel;

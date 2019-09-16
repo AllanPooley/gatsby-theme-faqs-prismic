@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from 'theme-ui';
 
 export const SearchBar = (props) => {
   const {
@@ -13,15 +13,16 @@ export const SearchBar = (props) => {
     <section
       className="faq-search-bar"
       sx={{
-        flex: 1,
+        width: '100%',
+        maxWidth: '800px',
         position: 'relative',
-        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: '20px',
       }}
     >
       <div
         className="container"
         sx={{
-          maxWidth: '350px',
           marginLeft: 'auto',
         }}
       >
@@ -40,9 +41,9 @@ export const SearchBar = (props) => {
             className="search-input"
             placeholder="Search"
             value={searchQuery}
-            onChange={event => setSearchHandler(event)}
-            onFocus={event => searchFocusHandler(event, true)}
-            onBlur={event => searchFocusHandler(event, false)}
+            onChange={(event) => setSearchHandler(event)}
+            onFocus={(event) => searchFocusHandler(event, true)}
+            onBlur={(event) => searchFocusHandler(event, false)}
             sx={{
               fontSize: '16px',
               width: '100%',
