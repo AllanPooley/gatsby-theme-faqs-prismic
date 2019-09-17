@@ -212,7 +212,7 @@ export default {
 
 ```
 
-![An example of a theme color change](https://raw.githubusercontent.com/AllanPooley/gatsby-theme-legals-demo/master/src/assets/images/gatsby-theme-legals-prismic-mockup-color-change.jpg)
+![An example of a theme color change](https://raw.githubusercontent.com/AllanPooley/gatsby-theme-faqs-demo/master/src/assets/images/gatsby-theme-faqs-prismic-mockup-color-change.jpg)
 
 The complete set of customisable theme values can be explored in [gatsby-theme-faqs-prismic/src/styles/theme.js](https://github.com/littleplusbig/gatsby-theme-faqs-prismic/blob/master/src/styles/theme.js)
 
