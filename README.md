@@ -1,3 +1,5 @@
+![Mockups of gatsby-theme-faqs-prismic in action](https://raw.githubusercontent.com/AllanPooley/gatsby-theme-faqs-demo/master/src/assets/images/gatsby-theme-faqs-prismic-mockup.jpg)
+
 # Gatsby Theme FAQs Prismic
 
 - [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding polished FAQ pages 💅out-of-the-box.
@@ -193,7 +195,7 @@ export default {
 
 Above are the default values for the theme, which you can change depending on your project.
 
-For example, here is how I might change the theme colours from shades of purple, to a snazzy blue:
+For example, here is how I might change the theme colours from shades of purple, to a refreshing green:
 
 ```
 import baseTheme from '@littleplusbig/gatsby-theme-faqs-prismic/src/gatsby-plugin-theme-ui';
@@ -202,13 +204,15 @@ export default {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-    primary: '#7ed6df',
-    primaryLight: '#c7ecee',
-    primaryDark: '#22a6b3',
+    primary: '#8BC34A',
+    primaryLight: '#CDDC39',
+    primaryDark: '#4CAF50',
   },
 };
 
 ```
+
+![An example of a theme color change](https://raw.githubusercontent.com/AllanPooley/gatsby-theme-legals-demo/master/src/assets/images/gatsby-theme-legals-prismic-mockup-color-change.jpg)
 
 The complete set of customisable theme values can be explored in [gatsby-theme-faqs-prismic/src/styles/theme.js](https://github.com/littleplusbig/gatsby-theme-faqs-prismic/blob/master/src/styles/theme.js)
 
