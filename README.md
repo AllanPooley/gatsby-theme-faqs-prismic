@@ -2,7 +2,12 @@
 
 # Gatsby Theme FAQs Prismic
 
-- [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding polished FAQ pages 💅out-of-the-box.
+- [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding a pretty FAQ page for Gatsby projects, out of the box 🌻🙋
+- Responsive across Mobiles 📱, Tablets 💊 and Desktops 🖥️
+- Customisable to your brand using [Theme UI](https://theme-ui.com/) 🎨
+- Builds FAQ page(s) sourced from content in [Prismic](https://prismic.io/)
+- Demo at [https://gatsby-theme-faqs.netlify.com/](https://gatsby-theme-faqs.netlify.com/)
+- Made by [Little & Big](https://www.littleandbig.com.au/)
 
 ## Why?
 
