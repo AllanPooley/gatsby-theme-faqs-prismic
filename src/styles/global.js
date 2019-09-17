@@ -1,5 +1,5 @@
-import theme from '../styles/theme'
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
+import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
-    /* stylelint-disable-next-line */
     font: inherit;
     vertical-align: baseline;
   }
@@ -70,8 +69,8 @@ const GlobalStyle = createGlobalStyle`
   }
   img {
     display: block;
-  	width: 100%;
-  	height: auto;
+    width: 100%;
+    height: auto;
   }
   button,
   input {
@@ -141,5 +140,5 @@ const GlobalStyle = createGlobalStyle`
   body:not(.user-is-tabbing) a:focus  {
     outline: none;
   }
-`
-export default GlobalStyle
+`;
+export default GlobalStyle;

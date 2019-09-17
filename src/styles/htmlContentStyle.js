@@ -1,8 +1,8 @@
-import theme from '../styles/theme'
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
+import theme from './theme';
 
 const HtmlContentStyle = createGlobalStyle`
-.html-content {
+.gatsby-theme-faqs-html-content {
   * {
     color: ${theme.colors.text}
   }
@@ -90,5 +90,5 @@ const HtmlContentStyle = createGlobalStyle`
     }
   }
 }
-`
-export default HtmlContentStyle
+`;
+export default HtmlContentStyle;
