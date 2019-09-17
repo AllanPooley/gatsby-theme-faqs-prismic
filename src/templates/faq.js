@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui';
 import { Component } from 'react';
 import { graphql } from 'gatsby';
-import { Styled } from 'theme-ui'
 import { Layout } from '../components/common';
 import {
   FaqHero,
@@ -16,7 +15,7 @@ class FrequentlyAskedQuestions extends Component {
     activeCategory: null,
     searchQuery: '',
     searchActive: false,
-  }
+  };
 
   componentWillMount() {
     const {
@@ -61,7 +60,7 @@ class FrequentlyAskedQuestions extends Component {
     } = pageData;
     let visibleQuestions = questions;
     if (searchQuery) {
-      visibleQuestions = questions.filter(faqItem => (
+      visibleQuestions = questions.filter((faqItem) => (
         faqItem.question.text.toLowerCase().includes(searchQuery)
       ));
     }
@@ -105,7 +104,7 @@ class FrequentlyAskedQuestions extends Component {
       metaDescription,
       openGraphImage,
     };
-    const categories = questions.map((faqItem => faqItem.category.document[0].data.categoryName.text));
+    const categories = questions.map(((faqItem) => faqItem.category.document[0].data.categoryName.text));
     const uniqueCategories = [...new Set(categories)];
     return (
       <Styled.root>
