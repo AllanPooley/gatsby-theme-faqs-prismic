@@ -1,3 +1,5 @@
+![Mockups of gatsby-theme-faqs-prismic in action](https://raw.githubusercontent.com/AllanPooley/gatsby-theme-faqs-demo/master/src/assets/images/gatsby-theme-faqs-prismic-mockup.jpg)
+
 # Gatsby Theme FAQs Prismic
 
 - [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) for adding polished FAQ pages 💅out-of-the-box.
@@ -22,9 +24,9 @@ In your `gatsby-config.js`, under `plugins` add:
 {
   resolve: "gatsby-theme-faqs-prismic",
   options: {
-    repositoryName: PRISMIC_REPO_NAME,
-    accessToken: PRISMIC_API_KEY,
-    siteName: YOUR_SITE_NAME // (Optional)
+    prismicRepositoryName: PRISMIC_REPO_NAME,
+    prismicAccessToken: PRISMIC_API_KEY,
+    siteName: YOUR_SITE_NAME, // (Optional)
     homePath: HOME_PATH // (Optional) Defaults to '/'
   },
 },
@@ -178,9 +180,9 @@ export default {
     ...baseTheme.colors,
     text: '#333333',
     background: '#FFFFFF',
-    primary: '#5B2589',
-    primaryLighter: '#6F2B9F',
-    primaryEvenLighter: '#BB75D1',
+    primary: '#1e3799',
+    primaryLight: '#4a69bd',
+    primaryDark: '#0c2461',
     white: '#FFFFFF',
     offWhite: '#FCFAFF',
     black: '#000000',
@@ -193,7 +195,7 @@ export default {
 
 Above are the default values for the theme, which you can change depending on your project.
 
-For example, here is how I might change the theme colours from shades of purple, to a snazzy blue:
+For example, here is how I might change the theme colours from shades of purple, to a refreshing green:
 
 ```
 import baseTheme from '@littleplusbig/gatsby-theme-faqs-prismic/src/gatsby-plugin-theme-ui';
@@ -202,13 +204,15 @@ export default {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-    primary: '#22a6b3',
-    primaryLighter: '#7ed6df',
-    primaryEvenLighter: '#c7ecee',
+    primary: '#8BC34A',
+    primaryLight: '#CDDC39',
+    primaryDark: '#4CAF50',
   },
 };
 
 ```
+
+![An example of a theme color change](https://raw.githubusercontent.com/AllanPooley/gatsby-theme-faqs-demo/master/src/assets/images/gatsby-theme-faqs-prismic-mockup-color-change.jpg)
 
 The complete set of customisable theme values can be explored in [gatsby-theme-faqs-prismic/src/styles/theme.js](https://github.com/littleplusbig/gatsby-theme-faqs-prismic/blob/master/src/styles/theme.js)
 
