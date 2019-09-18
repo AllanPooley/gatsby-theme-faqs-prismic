@@ -35,6 +35,21 @@ export const theme = {
     black: '#241E1E',
     offBlack: '#241E1E',
     grey: '#F3F3F3',
+    controlText: 'white',
+    controlTextActive: 'white',
+    controlTextHover: 'white',
+    controlBackground: '#965ADC',
+    controlBackgroundHover: '#2D235F',
+    controlBackgroundActive: '#2D235F',
+    controlBorder: '#965ADC',
+    controlBorderHover: '#2D235F',
+    controlBorderActive: '#2D235F',
+  },
+  borderWidths: {
+    controlBorderWidth: '1.5px',
+  },
+  radii: {
+    controlBorderRadius: '32px',
   },
   sizes: {
     wrapper: '1240px',
@@ -45,6 +60,13 @@ export const theme = {
       lineHeight: 'heading',
       fontWeight: 'heading',
       color: 'text',
+    },
+    controls: {
+      fontSize: [1, 1, 1, 1],
+      fontFamily: 'heading',
+      fontWeight: 'regular',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
     },
   },
   styles: {

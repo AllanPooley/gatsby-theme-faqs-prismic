@@ -6,11 +6,17 @@ import { generateKey } from '../../util/helpers';
 
 const ButtonStyles = (isActive) => ({
   display: 'inline-block',
-  borderRadius: '36px',
-  backgroundColor: isActive ? 'primaryDark' : 'primary',
+  borderRadius: 'controlBorderRadius',
+  borderStyle: 'solid',
+  borderWidth: 'controlBorderWidth',
+  borderColor: isActive ? 'controlBorderActive' : 'controlBorder',
+  backgroundColor: isActive ? 'controlBackgroundActive' : 'controlBackground',
   padding: '10px 20px',
+  variant: 'textStyles.controls',
+  color: isActive ? 'controlTextActive' : 'controlText',
+  textAlign: 'center',
   textDecoration: 'none',
-  transition: 'color 0.3s ease, background-color 0.3s ease',
+  transition: 'color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease',
   marginRight: '10px',
   marginBottom: [
     '10px',
@@ -19,21 +25,15 @@ const ButtonStyles = (isActive) => ({
     '0px',
   ],
   '&:hover': {
-    backgroundColor: 'primaryDark',
+    color: 'controlTextActive',
+    backgroundColor: 'controlBackgroundHover',
+    borderColor: 'controlBorderHover',
     cursor: isActive ? 'default' : 'pointer',
   },
   '&:focus, &:active': {
     outline: 'none',
   },
 });
-
-const ButtonTextStyles = {
-  display: 'block',
-  width: '100%',
-  color: 'white',
-  fontSize: '14px',
-  textAlign: 'center',
-};
 
 const CategoryButtons = (props) => {
   const {
@@ -66,17 +66,12 @@ const CategoryButtons = (props) => {
             aria-label="Show questions from all categories"
             sx={ButtonStyles(activeCategory === null)}
           >
-            <span
-              sx={ButtonTextStyles}
-            >
-              All
-            </span>
+            All
           </button>
           {categories && categories.map((category, index) => (
             <CategoryButton
               key={generateKey(index)}
               buttonStyles={ButtonStyles}
-              buttonTextStyles={ButtonTextStyles}
               isActive={activeCategory === category}
               categoryText={category}
               setActiveCategoryHandler={setActiveCategoryHandler}
