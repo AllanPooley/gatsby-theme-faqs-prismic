@@ -14,7 +14,6 @@ const QuestionContent = (props) => {
     <div
       className="question-content"
       sx={{
-        maxWidth: '1000px',
         padding: [
           '0',
           '0 45px',
@@ -30,9 +29,16 @@ const QuestionContent = (props) => {
           transition: 'height .33s cubic-bezier(.4, 0, .2, 1)',
         }}
       >
-        <HtmlContent
-          content={answer.html}
-        />
+        <div
+          className="text-container"
+          sx={{
+            maxWidth: '900px',
+          }}
+        >
+          <HtmlContent
+            content={answer.html}
+          />
+        </div>
       </Collapse>
     </div>
   );

@@ -9,12 +9,11 @@ const HtmlContent = ({ content }) => (
       className="gatsby-theme-faqs-html-content"
       dangerouslySetInnerHTML={{ __html: content }}
       sx={{
-        color: 'answerText',
         padding: [
           '20px 20px 30px',
-          '30px 20px 40px',
-          '30px 20px 40px',
-          '30px 20px 40px',
+          '30px 0 40px',
+          '30px 0 40px',
+          '30px 0 40px',
         ],
       }}
     />

@@ -71,6 +71,9 @@ export const SearchBar = (props) => {
               ':-ms-input-placeholder': {
                 color: 'placeholderText',
               },
+              '&:focus, &:active': {
+                outline: 'none',
+              },
             }}
           />
           <div

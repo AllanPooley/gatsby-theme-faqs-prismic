@@ -18,19 +18,19 @@ const RevealButton = (props) => {
         width: '100%',
         display: 'flex',
         flexDirection: [
-          'row-reverse',
+          'row',
           'row',
           'row',
           'row',
         ],
         alignItems: [
           'center',
-          'flex-start',
+          'center',
           'flex-start',
           'flex-start',
         ],
         justifyContent: [
-          'flex-end',
+          'space-between',
           'space-between',
           'space-between',
           'space-between',

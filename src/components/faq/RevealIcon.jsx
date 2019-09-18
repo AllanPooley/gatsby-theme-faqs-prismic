@@ -21,7 +21,7 @@ const RevealButton = (props) => {
         borderColor: 'controlBorder',
         borderRadius: '50%',
         margin: [
-          '0 15px 0 0',
+          '0 0 0 20px',
           '2.5px 0 0 15px',
           '2.5px 0 0 15px',
           '2.5px 0 0 15px',

@@ -44,10 +44,10 @@ const QuestionsListItem = (props) => {
       className={`faq-question ${questionExpanded ? 'expanded' : ''}`}
       sx={{
         paddingTop: [
-          '30px',
           '40px',
           '40px',
-          '40px',
+          '60px',
+          '60px',
         ],
         transition: 'margin 0.3s ease',
       }}
@@ -59,7 +59,6 @@ const QuestionsListItem = (props) => {
           flexDirection: 'row',
           alignItems: 'flex-start',
           borderBottom: '1.5px solid primary',
-          marginBottom: '30px',
           position: 'relative',
         }}
       >
