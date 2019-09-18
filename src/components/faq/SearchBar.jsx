@@ -73,7 +73,19 @@ export const SearchBar = (props) => {
               },
             }}
           />
-          <SearchIcon />
+          <div
+            className="search-icon"
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              left: '20px',
+              width: '18px',
+              height: '18px',
+            }}
+          >
+            <SearchIcon />
+          </div>
         </label>
       </div>
     </section>
