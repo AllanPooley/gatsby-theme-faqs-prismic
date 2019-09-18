@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from 'theme-ui';
 
 const Wrapper = (props) => {
   const { children } = props;
@@ -8,7 +8,7 @@ const Wrapper = (props) => {
       className="wrapper"
       sx={{
         width: '100%',
-        maxWidth: '1240px',
+        maxWidth: 'wrapper',
         marginLeft: 'auto',
         marginRight: 'auto',
         padding: [

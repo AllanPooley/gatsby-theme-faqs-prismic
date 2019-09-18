@@ -11,7 +11,18 @@ const QuestionContent = (props) => {
     answer,
   } = props;
   return (
-    <div className="question-content">
+    <div
+      className="question-content"
+      sx={{
+        maxWidth: '1000px',
+        padding: [
+          '0',
+          '0 45px',
+          '0 45px',
+          '0 45px',
+        ],
+      }}
+    >
       <Collapse
         isOpen={questionExpanded}
         sx={{
@@ -20,15 +31,6 @@ const QuestionContent = (props) => {
       >
         <HtmlContent
           content={answer.html}
-          sx={{
-            maxWidth: '1000px',
-            padding: [
-              '0 10px 0 45px',
-              '0 45px',
-              '0 45px',
-              '0 45px',
-            ],
-          }}
         />
       </Collapse>
     </div>
