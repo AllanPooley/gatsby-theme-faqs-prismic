@@ -3,10 +3,6 @@ import theme from './theme';
 
 const HtmlContentStyle = createGlobalStyle`
 .gatsby-theme-faqs-html-content {
-  * {
-    color: ${theme.colors.text}
-  }
-
   em {
     font-style: italic;
   }

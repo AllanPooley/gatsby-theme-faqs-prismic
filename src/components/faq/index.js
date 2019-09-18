@@ -5,6 +5,7 @@ import CategoryButton from './CategoryButton';
 import QuestionsList from './QuestionsList';
 import QuestionsListItem from './QuestionsListItem';
 import SearchBar from './SearchBar';
+import SearchIcon from './SearchIcon';
 import CopyLinkButton from './CopyLinkButton';
 import RevealButton from './RevealButton';
 import RevealIcon from './RevealIcon';
@@ -18,6 +19,7 @@ export {
   QuestionsList,
   QuestionsListItem,
   SearchBar,
+  SearchIcon,
   CopyLinkButton,
   RevealButton,
   RevealIcon,

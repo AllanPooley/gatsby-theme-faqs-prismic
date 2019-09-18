@@ -18,10 +18,14 @@ const RevealButton = (props) => {
         padding: '7.5px',
         borderWidth: '1.5px',
         borderStyle: 'solid',
-        borderColor: 'primary',
+        borderColor: 'controlBorder',
         borderRadius: '50%',
-        marginTop: '2.5px',
-        marginLeft: '10px',
+        margin: [
+          '0 15px 0 0',
+          '2.5px 0 0 15px',
+          '2.5px 0 0 15px',
+          '2.5px 0 0 15px',
+        ],
       }}
     >
       <div
@@ -63,7 +67,7 @@ const RevealButton = (props) => {
               `${iconLineWidth}px`,
               `${iconLineWidth}px`,
             ],
-            borderColor: 'primary',
+            borderColor: 'controlBorder',
             position: 'absolute',
             bottom: [
               `${parseFloat(iconWidthMobile / 2) - parseFloat(iconLineWidthMobile / 2)}px`,
@@ -92,7 +96,7 @@ const RevealButton = (props) => {
               `${iconLineWidth}px`,
               `${iconLineWidth}px`,
             ],
-            borderColor: 'primary',
+            borderColor: 'controlBorder',
             transform: 'rotate(90deg)',
             transformOrigin: 'center',
             transition: 'width 0.3s',

@@ -12,6 +12,12 @@ const CopyLinkButton = (props) => {
     <div
       className="copy-link-button"
       sx={{
+        display: [
+          'none',
+          'none',
+          'block',
+          'block',
+        ],
         position: 'relative',
       }}
     >

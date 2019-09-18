@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui';
 import { Component } from 'react';
 import queryString from 'query-string';
 import { QuestionsListItem } from '.';
-import { Wrapper } from '../common';
 import { scrollToPageElement } from '../../util/helpers';
 
 class QuestionsList extends Component {
@@ -29,7 +28,21 @@ class QuestionsList extends Component {
           minHeight: '100vh',
         }}
       >
-        <Wrapper>
+        <div
+          className="funky-wrapper"
+          sx={{
+            width: '100%',
+            maxWidth: 'wrapper',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            padding: [
+              '0',
+              '0px 20px',
+              '0px 20px',
+              '0px 40px',
+            ],
+          }}
+        >
           <div
             className="questions"
             sx={{
@@ -67,7 +80,7 @@ class QuestionsList extends Component {
               </span>
             )}
           </div>
-        </Wrapper>
+        </div>
       </section>
     );
   }

@@ -35,6 +35,7 @@ export const theme = {
     black: '#241E1E',
     offBlack: '#241E1E',
     grey: '#F3F3F3',
+    placeholderText: '#E6D7FA',
     controlText: 'white',
     controlTextActive: 'white',
     controlTextHover: 'white',
@@ -44,6 +45,8 @@ export const theme = {
     controlBorder: '#965ADC',
     controlBorderHover: '#2D235F',
     controlBorderActive: '#2D235F',
+    answerText: 'white',
+    answerBackground: 'black',
   },
   borderWidths: {
     controlBorderWidth: '1.5px',

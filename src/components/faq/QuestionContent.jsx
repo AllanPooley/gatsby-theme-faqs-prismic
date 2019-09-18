@@ -21,6 +21,7 @@ const QuestionContent = (props) => {
           '0 45px',
           '0 45px',
         ],
+        backgroundColor: 'answerBackground',
       }}
     >
       <Collapse

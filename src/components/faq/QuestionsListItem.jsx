@@ -43,8 +43,12 @@ const QuestionsListItem = (props) => {
       id={questionId}
       className={`faq-question ${questionExpanded ? 'expanded' : ''}`}
       sx={{
-        paddingTop: '40px',
-        marginBottom: questionExpanded ? '60px' : '0',
+        paddingTop: [
+          '30px',
+          '40px',
+          '40px',
+          '40px',
+        ],
         transition: 'margin 0.3s ease',
       }}
     >
