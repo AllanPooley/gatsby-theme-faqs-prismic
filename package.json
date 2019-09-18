@@ -15,7 +15,7 @@
     "prismic",
     "frequently-asked-questions"
   ],
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "main": "index.js",
   "scripts": {

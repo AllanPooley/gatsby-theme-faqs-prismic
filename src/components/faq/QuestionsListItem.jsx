@@ -60,6 +60,7 @@ const QuestionsListItem = (props) => {
           alignItems: 'flex-start',
           borderBottom: '1.5px solid primary',
           position: 'relative',
+          marginBottom: '20px',
         }}
       >
         <CopyLinkButton
