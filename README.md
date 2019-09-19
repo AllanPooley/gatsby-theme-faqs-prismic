@@ -91,6 +91,14 @@ Replacing `PRISMIC_REPO_NAME`, `PRISMIC_API_KEY`, `YOUR_SITE_NAME` and `HOME_PAT
         "placeholder": "Enter slug"
       }
     },
+    "hero_subtitle": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Hero Subtitle",
+        "placeholder": "You have questions, we have answers"
+      }
+    },
     "questions": {
       "type": "Group",
       "config": {

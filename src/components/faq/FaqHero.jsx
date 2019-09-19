@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui';
 
-export const FaqHero = () => (
+export const FaqHero = ({ title, subtitle }) => (
   <section
     className="faq-page-hero"
     sx={{
@@ -46,9 +46,10 @@ export const FaqHero = () => (
           sx={{
             color: 'black',
             maxWidth: '500px',
+            marginBottom: '40px',
           }}
         >
-          Frequently Asked Questions
+          {title}
         </Styled.h1>
       </div>
       <div
