@@ -46,6 +46,7 @@ export const theme = {
     controlBorder: '#965ADC',
     controlBorderHover: '#2D235F',
     controlBorderActive: '#2D235F',
+    promptText: 'text',
     answerText: 'text',
     answerBackground: 'transparent',
   },

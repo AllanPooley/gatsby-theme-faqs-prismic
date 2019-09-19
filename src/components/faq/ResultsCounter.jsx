@@ -22,7 +22,7 @@ const ResultsCounter = ({ hasValue, numResults }) => (
         fontSize: [0, 0, 0, 0],
         fontFamily: 'heading',
         fontWeight: 'regular',
-        fontColor: 'text',
+        color: 'promptText',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         padding: '15px 20px',
