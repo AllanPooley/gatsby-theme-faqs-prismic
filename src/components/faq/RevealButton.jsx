@@ -17,10 +17,30 @@ const RevealButton = (props) => {
       sx={{
         width: '100%',
         display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        justifyContent: 'space-between',
-        padding: '0',
+        flexDirection: [
+          'row',
+          'row',
+          'row',
+          'row',
+        ],
+        alignItems: [
+          'center',
+          'center',
+          'flex-start',
+          'flex-start',
+        ],
+        justifyContent: [
+          'space-between',
+          'space-between',
+          'space-between',
+          'space-between',
+        ],
+        padding: [
+          '0px 20px',
+          '0',
+          '0',
+          '0',
+        ],
         '&:hover': {
           cursor: 'pointer',
         },

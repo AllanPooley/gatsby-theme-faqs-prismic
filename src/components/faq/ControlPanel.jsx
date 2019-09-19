@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 import {
   CategoryButtons,
   SearchBar,
+  ResultsCounter,
 } from '.';
 import { Wrapper } from '../common';
 
@@ -15,13 +16,11 @@ const ControlPanel = (props) => {
     searchQuery,
     searchFocusHandler,
     setSearchHandler,
+    numResults,
   } = props;
   return (
     <div
       className="control-panel"
-      sx={{
-        padding: '50px 0',
-      }}
     >
       <Wrapper>
         <div
@@ -31,6 +30,10 @@ const ControlPanel = (props) => {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'space-between',
+            borderBottomStyle: 'solid',
+            borderBottomColor: 'divider',
+            borderBottomWidth: '2px',
+            padding: '50px 0',
           }}
         >
           <SearchBar
@@ -38,6 +41,10 @@ const ControlPanel = (props) => {
             searchQuery={searchQuery}
             setSearchHandler={setSearchHandler}
             searchFocusHandler={searchFocusHandler}
+          />
+          <ResultsCounter
+            numResults={numResults}
+            hasValue={Boolean(searchQuery !== '')}
           />
           <CategoryButtons
             activeCategory={activeCategory}

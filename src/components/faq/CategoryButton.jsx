@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui';
 
 const CategoryButton = ({
   buttonStyles,
-  buttonTextStyles,
   isActive,
   categoryText,
   setActiveCategoryHandler,
@@ -16,11 +15,7 @@ const CategoryButton = ({
     disabled={isActive}
     sx={buttonStyles(isActive)}
   >
-    <span
-      sx={buttonTextStyles}
-    >
-      {categoryText}
-    </span>
+    {categoryText}
   </button>
 );
 

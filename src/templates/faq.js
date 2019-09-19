@@ -121,6 +121,7 @@ class FrequentlyAskedQuestions extends Component {
             searchQuery={searchQuery}
             searchFocusHandler={this.searchFocusHandler}
             setSearchHandler={this.setSearchHandler}
+            numResults={visibleQuestions.length}
           />
           <QuestionsList
             questions={visibleQuestions}

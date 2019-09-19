@@ -43,9 +43,16 @@ const QuestionsListItem = (props) => {
       id={questionId}
       className={`faq-question ${questionExpanded ? 'expanded' : ''}`}
       sx={{
-        paddingTop: '40px',
-        marginBottom: questionExpanded ? '60px' : '0',
+        paddingTop: [
+          '40px',
+          '40px',
+          '60px',
+          '60px',
+        ],
         transition: 'margin 0.3s ease',
+        // '&:first-of-type': {
+        //   paddingTop: '0',
+        // },
       }}
     >
       <div
@@ -55,8 +62,8 @@ const QuestionsListItem = (props) => {
           flexDirection: 'row',
           alignItems: 'flex-start',
           borderBottom: '1.5px solid primary',
-          marginBottom: '30px',
           position: 'relative',
+          marginBottom: '20px',
         }}
       >
         <CopyLinkButton

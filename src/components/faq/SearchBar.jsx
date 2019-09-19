@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { SearchIcon } from '.';
 
 export const SearchBar = (props) => {
   const {
@@ -8,7 +9,8 @@ export const SearchBar = (props) => {
     setSearchHandler,
     searchFocusHandler,
   } = props;
-  const classes = `${searchActive ? ' active' : ''}${(searchQuery !== '') ? ' has-value' : ''}`;
+  const hasValue = Boolean(searchQuery !== '');
+  const classes = `${searchActive ? ' active' : ''}${hasValue ? ' has-value' : ''}`;
   return (
     <section
       className="faq-search-bar"
@@ -17,7 +19,8 @@ export const SearchBar = (props) => {
         maxWidth: '800px',
         position: 'relative',
         marginRight: 'auto',
-        marginBottom: '20px',
+        marginBottom: hasValue ? '0px' : '20px',
+        transition: 'margin 0.3s ease',
       }}
     >
       <div
@@ -45,18 +48,34 @@ export const SearchBar = (props) => {
             onFocus={(event) => searchFocusHandler(event, true)}
             onBlur={(event) => searchFocusHandler(event, false)}
             sx={{
+              variant: 'textStyles.controls',
               fontSize: '16px',
               width: '100%',
               margin: '0',
-              padding: '12px 20px 10px 50px',
+              padding: '10px 20px 10px 50px',
               boxShadow: 'none',
               color: 'text',
-              borderRadius: '32px',
-              borderWidth: '1.5px',
+              borderRadius: 'controlBorderRadius',
+              borderWidth: 'controlBorderWidth',
               borderStyle: 'solid',
-              borderColor: 'primary',
-              backgroundColor: 'white',
+              borderColor: 'controlBorder',
+              backgroundColor: 'transparent',
               transition: 'color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease',
+              '::-webkit-input-placeholder': {
+                color: 'placeholderText',
+              },
+              ':-moz-placeholder': {
+                color: 'placeholderText',
+              },
+              '::-moz-placeholder': {
+                color: 'placeholderText',
+              },
+              ':-ms-input-placeholder': {
+                color: 'placeholderText',
+              },
+              '&:focus, &:active': {
+                outline: 'none',
+              },
             }}
           />
           <div
@@ -70,15 +89,7 @@ export const SearchBar = (props) => {
               height: '18px',
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 18 18"
-              sx={{
-                fill: 'primary'
-              }}
-            >
-              <path fillRule="nonzero" d="M13.561 12.52l3.939 3.94a.86.86 0 1 1-1.215 1.215l-4.008-4.008a7.476 7.476 0 1 1 1.285-1.146zm-5.585.874a5.844 5.844 0 1 0 0-11.688 5.844 5.844 0 0 0 0 11.688z" />
-            </svg>
+            <SearchIcon />
           </div>
         </label>
       </div>
