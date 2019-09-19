@@ -8,6 +8,14 @@
         "placeholder": "Enter page name"
       }
     },
+    "hero_subtitle": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Hero Subtitle",
+        "placeholder": "You have questions, we have answers"
+      }
+    },
     "uid": {
       "type": "UID",
       "config": {

@@ -9,10 +9,10 @@ export const theme = {
   },
   fontSizes: [14, 16, 20, 28, 36, 44, 64, 80],
   fontWeights: {
-    body: 300,
-    regular: 300,
-    medium: 400,
-    subheading: 400,
+    body: 400,
+    regular: 400,
+    medium: 500,
+    subheading: 500,
     heading: 700,
     bold: 700,
   },
@@ -61,6 +61,13 @@ export const theme = {
   },
   textStyles: {
     heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      color: 'text',
+    },
+    label: {
+      fontSize: [2, 2, 3, 3],
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
