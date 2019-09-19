@@ -35,6 +35,7 @@ export const theme = {
     black: '#241E1E',
     offBlack: '#241E1E',
     grey: '#F3F3F3',
+    divider: '#F3F3F3',
     placeholderText: '#E6D7FA',
     controlText: 'white',
     controlTextActive: 'white',

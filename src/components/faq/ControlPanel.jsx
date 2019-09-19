@@ -31,7 +31,7 @@ const ControlPanel = (props) => {
             alignItems: 'center',
             justifyContent: 'space-between',
             borderBottomStyle: 'solid',
-            borderBottomColor: 'grey',
+            borderBottomColor: 'divider',
             borderBottomWidth: '2px',
             padding: '50px 0',
           }}
