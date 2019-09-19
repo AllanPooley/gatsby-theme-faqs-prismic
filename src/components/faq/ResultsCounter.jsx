@@ -10,6 +10,7 @@ const ResultsCounter = ({ hasValue, numResults }) => (
       height: hasValue ? '50px' : '0px',
       transition: 'height 0.3s ease',
       position: 'relative',
+      zIndex: hasValue ? '1' : '-1',
     }}
   >
     <span
