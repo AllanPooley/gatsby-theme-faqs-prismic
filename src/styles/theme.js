@@ -73,13 +73,12 @@ export const theme = {
     },
   },
   styles: {
-    Main: {
-      backgroundColor: 'background',
-    },
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
+      color: 'answerText',
+      backgroundColor: 'answerBackground',
     },
     h1: {
       variant: 'textStyles.heading',
@@ -104,6 +103,9 @@ export const theme = {
     h6: {
       variant: 'textStyles.heading',
       fontSize: 0,
+    },
+    span: {
+      variant: 'textStyles.label',
     },
   },
 };

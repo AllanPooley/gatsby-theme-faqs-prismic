@@ -50,6 +50,9 @@ const QuestionsListItem = (props) => {
           '60px',
         ],
         transition: 'margin 0.3s ease',
+        // '&:first-of-type': {
+        //   paddingTop: '0',
+        // },
       }}
     >
       <div

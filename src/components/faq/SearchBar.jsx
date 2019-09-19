@@ -9,7 +9,8 @@ export const SearchBar = (props) => {
     setSearchHandler,
     searchFocusHandler,
   } = props;
-  const classes = `${searchActive ? ' active' : ''}${(searchQuery !== '') ? ' has-value' : ''}`;
+  const hasValue = Boolean(searchQuery !== '');
+  const classes = `${searchActive ? ' active' : ''}${hasValue ? ' has-value' : ''}`;
   return (
     <section
       className="faq-search-bar"
@@ -18,7 +19,8 @@ export const SearchBar = (props) => {
         maxWidth: '800px',
         position: 'relative',
         marginRight: 'auto',
-        marginBottom: '20px',
+        marginBottom: hasValue ? '0px' : '20px',
+        transition: 'margin 0.3s ease',
       }}
     >
       <div

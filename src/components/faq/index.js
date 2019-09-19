@@ -10,6 +10,7 @@ import CopyLinkButton from './CopyLinkButton';
 import RevealButton from './RevealButton';
 import RevealIcon from './RevealIcon';
 import QuestionContent from './QuestionContent';
+import ResultsCounter from './ResultsCounter';
 
 export {
   FaqHero,
@@ -24,4 +25,5 @@ export {
   RevealButton,
   RevealIcon,
   QuestionContent,
+  ResultsCounter,
 };
