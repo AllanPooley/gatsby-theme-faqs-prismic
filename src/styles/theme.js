@@ -77,6 +77,7 @@ export const theme = {
       fontSize: [1, 1, 1, 1],
       fontFamily: 'heading',
       fontWeight: 'regular',
+      lineHeight: 'heading',
       textTransform: 'uppercase',
       letterSpacing: '0.05em',
     },
