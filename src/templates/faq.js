@@ -127,9 +127,6 @@ class FrequentlyAskedQuestions extends Component {
         }
       );
     });
-    console.log('Faq Schema Data:', JSON.stringify(faqSchemaData));
-
-
     return (
       <Styled.root>
         <Layout
