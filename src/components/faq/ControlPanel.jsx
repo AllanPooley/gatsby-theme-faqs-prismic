@@ -33,7 +33,7 @@ const ControlPanel = (props) => {
             borderBottomStyle: 'solid',
             borderBottomColor: 'divider',
             borderBottomWidth: '2px',
-            padding: '50px 0',
+            padding: '50px 0 40px',
           }}
         >
           <SearchBar

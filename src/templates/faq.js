@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui';
+import Helmet from 'react-helmet';
 import { Component } from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/common';
@@ -110,12 +111,36 @@ class FrequentlyAskedQuestions extends Component {
     const bannerSubtitle = heroSubtitle && heroSubtitle.text ? heroSubtitle.text : 'You have questions, we have answers';
     const categories = questions.map(((faqItem) => faqItem.category.document[0].data.categoryName.text));
     const uniqueCategories = [...new Set(categories)];
+    const faqSchemaData = questions && questions.length > 0 && questions.map((questionItem) => {
+      const {
+        question,
+        answer,
+      } = questionItem;
+      return (
+        {
+          '@type': 'Question',
+          name: question.text,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: answer.text,
+          },
+        }
+      );
+    });
     return (
       <Styled.root>
         <Layout
           location={location}
           seoData={seoData}
         >
+          <Helmet>
+            <script
+              className="structured-data-list"
+              type="application/ld+json"
+            >
+              {JSON.stringify(faqSchemaData)}
+            </script>
+          </Helmet>
           <FaqHero
             title={bannerTitle}
             subtitle={bannerSubtitle}
@@ -159,6 +184,7 @@ query FrequentlyAskedQuestionsQuery {
           text
         }
         answer {
+          text
           html
         }
         category {
