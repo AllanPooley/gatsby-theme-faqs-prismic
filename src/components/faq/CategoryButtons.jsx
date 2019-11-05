@@ -18,12 +18,7 @@ const ButtonStyles = (isActive) => ({
   textDecoration: 'none',
   transition: 'color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease',
   marginRight: '10px',
-  marginBottom: [
-    '10px',
-    '10px',
-    '10px',
-    '0px',
-  ],
+  marginBottom: '10px',
   '&:hover': {
     color: 'controlTextActive',
     backgroundColor: 'controlBackgroundHover',

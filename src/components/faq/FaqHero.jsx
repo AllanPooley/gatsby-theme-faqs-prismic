@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui';
 
-export const FaqHero = ({ title, subtitle }) => (
+export const FaqHero = ({ title }) => (
   <section
     className="faq-page-hero"
     sx={{
