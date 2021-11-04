@@ -67,7 +67,7 @@ class FrequentlyAskedQuestions extends Component {
     }
     if (activeCategory) {
       visibleQuestions = visibleQuestions.filter((faqItem) => {
-        const thisCategory = faqItem.category.document[0].data.categoryName.text;
+        const thisCategory = faqItem.category.document[0].data.categoryName.text || faqItem.category.document.data.categoryName.text;
         return activeCategory === thisCategory;
       });
     }
@@ -109,7 +109,7 @@ class FrequentlyAskedQuestions extends Component {
     };
     const bannerTitle = pageTitle && pageTitle.text ? pageTitle.text : 'Frequently Asked Questions';
     const bannerSubtitle = heroSubtitle && heroSubtitle.text ? heroSubtitle.text : 'You have questions, we have answers';
-    const categories = questions.map(((faqItem) => faqItem.category.document[0].data.categoryName.text));
+    const categories = questions.map(((faqItem) => faqItem.category.document[0].data.categoryName.text || faqItem.category.document.data.categoryName.text));
     const uniqueCategories = [...new Set(categories)];
     const faqSchemaData = questions && questions.length > 0 && questions.map((questionItem) => {
       const {
